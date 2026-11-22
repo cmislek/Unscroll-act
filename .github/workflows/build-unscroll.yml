@@ -30,6 +30,7 @@ jobs:
       - name: Build and validate IPA
         env:
           INPUT_IPA_URL: ${{ inputs.ipa_url }}
+          GITHUB_TOKEN: ${{ github.token }}
         shell: bash
         run: |
           set -euo pipefail
